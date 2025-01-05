@@ -24,19 +24,19 @@ export default {
       navbar: [
         {
           title: "Votes",
-          img: "../assets/img/picker.svg",
+          img: "./assets/img/picker.svg",
         },
         {
           title: "Friends",
-          img: "../assets/img/group.svg",
+          img: "./assets/img/group.svg",
         },
         {
           title: "Earn",
-          img: "../assets/img/coins.svg",
+          img: "./assets/img/coins.svg",
         },
         {
           title: "Airdrop",
-          img: "../assets/img/coin.png",
+          img: "./assets/img/coin.png",
         },
       ],
       friends: [
