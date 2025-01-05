@@ -81,13 +81,13 @@ export default {
     return {
       candidates: [
         {
-          name: "Biden",
+          name: "...",
           energy: 200,
           fillClass: "fill-progress bd-fill-progress",
           progressWidth: "10%",
         },
         {
-          name: "Trump",
+          name: "...",
           energy: 200,
           fillClass: "fill-progress tr-fill-progress",
           progressWidth: "52%",
