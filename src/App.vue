@@ -24,25 +24,25 @@ export default {
       navbar: [
         {
           title: "Votes",
-          img: "../src/assets/img/picker.svg",
+          img: "../assets/img/picker.svg",
         },
         {
           title: "Friends",
-          img: "../src/assets/img/group.svg",
+          img: "../assets/img/group.svg",
         },
         {
           title: "Earn",
-          img: "../src/assets/img/coins.svg",
+          img: "../assets/img/coins.svg",
         },
         {
           title: "Airdrop",
-          img: "../src/assets/img/coin.png",
+          img: "../assets/img/coin.png",
         },
       ],
       friends: [
         {
           name: "Jimmy",
-          img: "../src/assets/jimmy.svg",
+          img: "../assets/jimmy.svg",
           coins: 1000,
         },
       ],

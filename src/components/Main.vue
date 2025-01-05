@@ -3,11 +3,11 @@
     <header>
       <div class="header">
         <div class="container name">
-          <img src="../assets/img/main/avatar.svg" alt="Avatar">
+          <img src="../assets/img/main/avatar.svg" alt="Avatar" />
           <p>John Smith</p>
         </div>
         <div class="container exchange">
-          <img src="../assets/img/main/binance.png" alt="Binance">
+          <img src="../assets/img/main/binance.png" alt="Binance" />
           <p>Binance</p>
         </div>
       </div>
@@ -17,32 +17,52 @@
         <h1>Tap on your candidate</h1>
       </div>
       <div class="container presidents">
-				<div class="baiden" >
-					<img src="../assets/img/main/biden.png" id="biden" class="president-image" alt="Biden">
-					<img src="../assets/img/main/blue-circle.png" id="blue-circle" class="circle-image" alt="Blue circle">
-				</div>
-				<div class="tramp" >
-					<img src="../assets/img/main/tramp.png" id="tramp" class="president-image" alt="Trump">
-					<img src="../assets/img/main/red-circle.png" id="red-circle" class="circle-image" alt="Red circle">
-				</div>
-</div>
+        <div class="baiden">
+          <!-- <img src="../assets/img/main/biden.png" id="biden" class="president-image" alt="Biden"> -->
+          <img
+            src="../assets/img/main/blue-circle.png"
+            id="blue-circle"
+            class="circle-image"
+            alt="Blue circle"
+          />
+        </div>
+        <div class="tramp">
+          <!-- <img src="../assets/img/main/tramp.png" id="tramp" class="president-image" alt="Trump"> -->
+          <img
+            src="../assets/img/main/red-circle.png"
+            id="red-circle"
+            class="circle-image"
+            alt="Red circle"
+          />
+        </div>
+      </div>
 
-      <div class="power-bar" v-for="candidate in candidates" :key="candidate.name">
+      <div
+        class="power-bar"
+        v-for="candidate in candidates"
+        :key="candidate.name"
+      >
         <div class="container line">
           <div class="president">
             <p>{{ candidate.name }}</p>
-            <img src="../assets/img/main/next.png" width="5" alt="Next">
+            <img src="../assets/img/main/next.png" width="5" alt="Next" />
           </div>
-          <p><span class="energy">{{ candidate.energy }}</span>/10000</p>
+          <p>
+            <span class="energy">{{ candidate.energy }}</span
+            >/10000
+          </p>
         </div>
         <div class="progressbar">
-          <div :class="candidate.fillClass" :style="{ width: (candidate.energy / 10000 * 100 + '%')}"></div>
+          <div
+            :class="candidate.fillClass"
+            :style="{ width: (candidate.energy / 10000) * 100 + '%' }"
+          ></div>
         </div>
       </div>
 
       <div class="container votes">
         <div class="container light">
-          <img src="../assets/img/main/lightning.png" alt="Lightning">
+          <img src="../assets/img/main/lightning.png" alt="Lightning" />
           <div class="remaining-votes">
             <p>Remaining votes</p>
             <p>{{ remainingVotes }} / {{ totalVotes }}</p>
@@ -56,30 +76,53 @@
 
 <script>
 export default {
-  name: 'ElectionComponent',
+  name: "ElectionComponent",
   data() {
     return {
       candidates: [
-        { name: 'Biden', energy: 200, fillClass: 'fill-progress bd-fill-progress', progressWidth: '10%' },
-        { name: 'Trump', energy: 200, fillClass: 'fill-progress tr-fill-progress', progressWidth: '52%' }
+        {
+          name: "Biden",
+          energy: 200,
+          fillClass: "fill-progress bd-fill-progress",
+          progressWidth: "10%",
+        },
+        {
+          name: "Trump",
+          energy: 200,
+          fillClass: "fill-progress tr-fill-progress",
+          progressWidth: "52%",
+        },
       ],
       remainingVotes: 500,
-      totalVotes: 5500
-    }
-  }
-}
+      totalVotes: 5500,
+    };
+  },
+};
 </script>
 
-
 <style scoped>
-
 :root {
-  --primary-gradient: linear-gradient(180deg, rgb(53, 56, 158), rgb(7, 23, 65) 98%);
-  --secondary-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(78, 73, 73, 0.2) 100%);
-  --biden-gradient: linear-gradient(270deg, rgb(53, 56, 158) 29.5%, rgb(28, 40, 72) 98%);
-  --trump-gradient: linear-gradient(270deg, rgb(208, 56, 56) 0%, rgb(100, 14, 14) 97.5%);
+  --primary-gradient: linear-gradient(
+    180deg,
+    rgb(53, 56, 158),
+    rgb(7, 23, 65) 98%
+  );
+  --secondary-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(78, 73, 73, 0.2) 100%
+  );
+  --biden-gradient: linear-gradient(
+    270deg,
+    rgb(53, 56, 158) 29.5%,
+    rgb(28, 40, 72) 98%
+  );
+  --trump-gradient: linear-gradient(
+    270deg,
+    rgb(208, 56, 56) 0%,
+    rgb(100, 14, 14) 97.5%
+  );
 }
-
 
 .container {
   display: flex;
@@ -93,7 +136,8 @@ export default {
   margin-bottom: 20px;
 }
 
-.name, .exchange {
+.name,
+.exchange {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -117,7 +161,8 @@ main h1 {
   margin: 140px 0 25px;
 }
 
-.baiden, .tramp {
+.baiden,
+.tramp {
   position: relative;
 }
 
@@ -177,12 +222,20 @@ main h1 {
 
 .bd-fill-progress {
   width: 10%;
-	background: linear-gradient(270.00deg, rgb(53, 56, 158) 29.5%, rgb(28, 40, 72) 98%);
+  background: linear-gradient(
+    270deg,
+    rgb(53, 56, 158) 29.5%,
+    rgb(28, 40, 72) 98%
+  );
 }
 
 .tr-fill-progress {
   width: 52%;
-	background: linear-gradient(270.00deg, rgb(208, 56, 56) 0%, rgb(100, 14, 14) 97.5%);
+  background: linear-gradient(
+    270deg,
+    rgb(208, 56, 56) 0%,
+    rgb(100, 14, 14) 97.5%
+  );
 }
 
 .votes {
@@ -199,5 +252,4 @@ main h1 {
   height: 35px;
   width: 20px;
 }
-
 </style>
