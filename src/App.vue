@@ -6,6 +6,10 @@ import NavBar from "./components/NavBar.vue";
 import AirdropTasks from "./components/AirdropTasks.vue";
 import WalletModal from "./components/WalletModal.vue";
 import Rewards from "./components/Rewards.vue";
+import pickerImg from "@/assets/img/picker.svg";
+import groupImg from "@/assets/img/group.svg";
+import coinsImg from "@/assets/img/coins.svg";
+import coinImg from "@/assets/img/coin.png";
 
 export default {
   components: {
@@ -24,19 +28,19 @@ export default {
       navbar: [
         {
           title: "Votes",
-          img: "@/assets/img/picker.svg",
+          img: pickerImg,
         },
         {
           title: "Friends",
-          img: "@/assets/img/group.svg",
+          img: groupImg,
         },
         {
           title: "Earn",
-          img: "@/assets/img/coins.svg",
+          img: coinsImg,
         },
         {
           title: "Airdrop",
-          img: "@/assets/img/coin.png",
+          img: coinImg,
         },
       ],
       friends: [
