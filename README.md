@@ -50,7 +50,7 @@ npm run build
 
 ## Тестирование приложения
 
-Вы можете протестировать приложение, перейдя по ссылке: (Clicker)[https://kkonstantin08.github.io/clicker/].
+Вы можете протестировать приложение, перейдя по ссылке: [Clicker](https://kkonstantin08.github.io/clicker/).
 
 ---
 
@@ -106,5 +106,5 @@ The project's styles are defined through CSS variables and a reset stylesheet. T
 
 ## Testing the Application
 
-You can test the application by visiting the following link: (Clicker)[https://kkonstantin08.github.io/clicker/].
+You can test the application by visiting the following link: [Clicker](https://kkonstantin08.github.io/clicker/).
 
